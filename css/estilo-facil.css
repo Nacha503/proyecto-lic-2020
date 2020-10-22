@@ -1,0 +1,86 @@
+:root {
+  --imagen: url(../imagen/spiderman.jpg);
+}
+
+div{
+	text-align: center;
+}
+
+/*Estilo de organización de cada pieza*/
+.tabla{
+	display: table;
+	margin: 0 auto;
+}
+.fila{
+	display: table-row;
+}
+
+/*Asignación de estilo e imagen a cada pieza*/
+.pieza {
+	display: table-cell;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	background: var(--imagen);
+	background-size: 300px 300px;
+	border: solid 2px white;
+}
+.pieza1 {
+	background-position: 0px 0px;
+}
+.pieza2 {
+	background-position: -100px 0px;
+}
+.pieza3 {
+	background-position: -200px 0px;
+}
+.pieza4 {
+	background-position: 0px -100px;
+}
+.pieza5 {
+	background-position: -100px -100px;
+}
+.pieza6 {
+	background-position: -200px -100px;
+}
+.pieza7 {
+	background-position: 0px -200px;
+}
+.pieza8 {
+	background-position: -100px -200px;
+}
+.pieza9 {
+	display: table-cell;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	background: white;
+	background-size: cover;
+	border: solid 2px white;
+}
+
+/*Estilo Botón*/
+button.btnEmpezar{
+	margin-bottom: 20px;
+	cursor: pointer;
+	border: none;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 20px;
+	padding: 10px;
+	font-family: 'Work Sans', sans-serif;
+	background-color: #F7CE6F;
+	font-weight: bolder;
+	width: 180px;
+}
+button.btnEmpezar:hover
+{
+	cursor: pointer;
+	background-color: #ffb100;
+	color: white;
+}
+
+button.btnEmpezar:active
+{
+	background-color: #c48800;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desafío de Puzzle</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:500&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">  
+
+    <!-- CSS personalizada -->
+    <link rel="stylesheet" media="screen" type="text/css" href="css/estilo.css">
+  </head>
+  <body>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <header class="col header">
+        <a href="index.html">
+          <h1 class="text-center titulo"><img class="logo" src="imagen/jigsaw.png">DESAFÍO DE PUZZLE</h1>
+        </a>
+      </header>
+
+      <div class="w-100"></div>
+
+      <nav class="col menu">
+        <ol class="navegacion">
+          <li><a href="comojugar.html">¿CÓMO JUGAR?</a></li>
+          <li><a href="index.html">JUGAR</a></li>
+          <li><a href="creadoresdeljuego.html">CREADORES DEL JUEGO</a></li>
+        </ol>
+      </nav>
+
+      <div class="w-100"></div>
+
+      <aside class="col-md-3">
+        <div class="w-100"></div>
+        <div class="col-md-12 tarjeta">
+          <h3>GANADORES</h3>
+          <ol id="ganadores"></ol>
+        </div>
+      </aside>
+
+      <section class="col-md-9">
+        <div class="divide-20"></div>
+        <div class="col-md-12">
+          <h1 class="titulocom text-center">CREADORES</h1>
+          <hr>
+          <h3 class="hpas text-center">ESTUDIANTE DE INGENIERÍA EN COMPUTACIÓN</h3>
+          <center><p>CHRISTIAN JOSÚE LANDAVERDE FLORES</p></center>
+        </div>
+      </section>
+
+      <div class="divide-20"></div>
+      
+      <footer class="col-md-12">
+        <h5 class="text-center">Derechos Reservados 2019<br>Universidad Don Bosco</h5>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Bootstrap -->
+  <script type="text/javascript" src="js/bootstrap/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap/popper.min.js"></script>
+
+  <script type="text/javascript" src="js/funcionalidades.js"></script>
+  <script type="text/javascript">
+    window.onload = function(){
+      mostrarGanadores();
+    }
+  </script>
+  </body>
+</html>
