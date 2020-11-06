@@ -1,8 +1,8 @@
-const solucion = [[1,2,3],[4,5,6],[7,8,9]]; //Respuesta correcta de resolución del puzzle
-var posiciones = [[1,2,3],[4,5,6],[7,8,9]]; //Estado inicial de las piezas en un array 3×3
+const solucion = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]; //Respuesta correcta de resolución del puzzle
+var posiciones = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]; //Estado inicial de las piezas en un array 4×4
 var iniciado = false; //determina si se ha iniciado un nuevo intento
 
-function moverPieza(celda1,celda2) { //Intercambia las clases y estilos de las celdas (graficamente)
+function moverPieza(celda1,celda2) { //Intercambia las clases y estilos de las celdas
   var temp = document.getElementById(celda1).className;
   document.getElementById(celda1).className = document.getElementById(celda2).className;
   document.getElementById(celda2).className = temp;
@@ -18,16 +18,16 @@ function desordenar() {
 	iniciado = true;
 
 	//For anidados para poder acceder a todas las filas y columnas 
-	for (var fila=1;fila<=3;fila++) { //Por cada fila de la matriz 3x3
-	   for (var columna=1;columna<=3;columna++){ //Para cada columna de la fila
+	for (var fila=1;fila<=4;fila++) { //Por cada fila de la matriz 4x4
+	   for (var columna=1;columna<=4;columna++){ //Para cada columna de la fila
 
-		    var fila2=Math.floor(Math.random()*(3-1)) + 1; //Obtiene una fila random de la 1 a la 3
-		    var columna2=Math.floor(Math.random()*(3-1)) + 1; //Obtiene una columna random de la 1 a la 3
+		    var fila2=Math.floor(Math.random()*(4-1)) + 1; //Obtiene una fila random de la 1 a la 4
+		    var columna2=Math.floor(Math.random()*(4-1)) + 1; //Obtiene una columna random de la 1 a la 4
 		    
-		    cambiarPosicion(fila, columna, fila2, columna2); //Se intercambian las piezas logicamente
+		    cambiarPosicion(fila, columna, fila2, columna2); //Se intercambian las piezas logicamente 
 		    moverPieza("celda"+fila+columna,"celda"+fila2+columna2); //Se intercambian las piezas graficamente
 	  	} 
-	}
+	} 
 }
 
 function clickPieza(fila, columna){
@@ -35,10 +35,10 @@ function clickPieza(fila, columna){
 		var celda = document.getElementById("celda"+fila+columna);
 		var pieza = celda.className;
 		
-		if (pieza!="pieza9") { 
+		if (pieza!="pieza16") { 
 			//Verificar si la pieza vacía está a la derecha
-			if (columna<3) {
-				if ( document.getElementById("celda"+fila+(columna+1)).className=="pieza9") {
+			if (columna<4) {
+				if ( document.getElementById("celda"+fila+(columna+1)).className=="pieza16") {
 					moverPieza("celda"+fila+columna,"celda"+fila+(columna+1));
 					cambiarPosicion(fila, columna, fila, (columna+1));
 					comprobarSolucion();
@@ -48,7 +48,7 @@ function clickPieza(fila, columna){
 
 			//Verificar si la pieza vacía está a la izquierda
 			if (columna>1) {
-				if ( document.getElementById("celda"+fila+(columna-1)).className=="pieza9") {
+				if ( document.getElementById("celda"+fila+(columna-1)).className=="pieza16") {
 					moverPieza("celda"+fila+columna,"celda"+fila+(columna-1));
 					cambiarPosicion(fila, columna, fila, (columna-1));
 					comprobarSolucion();
@@ -58,7 +58,7 @@ function clickPieza(fila, columna){
 
 			////Verificar si la pieza vacía está arriba
 			if (fila>1) {
-				if ( document.getElementById("celda"+(fila-1)+columna).className=="pieza9") {
+				if ( document.getElementById("celda"+(fila-1)+columna).className=="pieza16") {
 					moverPieza("celda"+fila+columna,"celda"+(fila-1)+columna);
 					cambiarPosicion(fila, columna, (fila-1), columna);
 					comprobarSolucion();
@@ -67,8 +67,8 @@ function clickPieza(fila, columna){
 			}
 
 			//Verificar si la pieza vacía está abajo 
-			if (fila<3) {
-				if ( document.getElementById("celda"+(fila+1)+columna).className=="pieza9") {
+			if (fila<4) {
+				if ( document.getElementById("celda"+(fila+1)+columna).className=="pieza16") {
 					moverPieza("celda"+fila+columna,"celda"+(fila+1)+columna);
 					cambiarPosicion(fila, columna, (fila+1), columna);
 					comprobarSolucion();
