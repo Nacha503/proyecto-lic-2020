@@ -2,6 +2,7 @@
 *
 {
 	font-family: 'Work Sans', sans-serif;
+	/* background-color: #F7FDC1; */
 }
 
 /* MENU y NAVEGACION */
@@ -14,7 +15,7 @@
 	vertical-align: middle;
 }
 .header{
-	background-color: #F7CE6F;
+	background-color: #99D6E9;
 	padding: 10px;
 }
 .titulo{
@@ -26,7 +27,7 @@
 	text-decoration: none !important;	
 }
 .menu{
-	background: #F9C246;
+	background: #BCE5E7;
 	padding: 5px;
 	text-align: center;
 }
