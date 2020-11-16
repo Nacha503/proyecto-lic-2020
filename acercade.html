@@ -48,21 +48,19 @@
       <section class="col-md-9">
         <div class="divide-20"></div>
         <div class="col-md-12">
-          <h1 class="titulocom text-center">CREADORES</h1>
+          <h1 class="titulocom text-center">ACERCA DE</h1>
           <hr>
-          <h3 class="hpas text-center">ESTUDIANTE DE INGENIERÍA EN COMPUTACIÓN</h3>
-          <hr>
-          <center><p>OSCAR STEVEN GARCIA MENJIVAR | GM191382</p></center>
-          <center><p>OSCAR ANIBAL CARRANZA VALIENTE | CV181237</p></center>
-          <center><p>MARVIN JOSUE RIVERA SERRANO | RS180397</p></center>
+          <h2 class="pasos">¿QUÉ ES UN PUZZLE?</h2>
+		  <p id="wikiarticle"></p>
+		  <p><a href="https://es.wikipedia.org/wiki/Rompecabezas_(juego)">Fuente: Wikipedia</a></p>
         </div>
-        <div class="divide-20"></div>
-        
-        <footer class="col-md-12">
-          <h5 class="text-center">Derechos Reservados 2020<br>Universidad Don Bosco</h5>
-        </footer>
       </section>
 
+      <div class="divide-20"></div>
+
+      <footer class="col-md-12">
+        <h5 class="text-center">Derechos Reservados 2020<br>Universidad Don Bosco</h5>
+      </footer>
     </div>
   </div>
 
@@ -72,9 +70,11 @@
   <script type="text/javascript" src="js/bootstrap/popper.min.js"></script>
 
   <script type="text/javascript" src="js/funcionalidades.js"></script>
+  <script type="text/javascript" src="js/wikipedia.js"></script>
   <script type="text/javascript">
     window.onload = function(){
       mostrarGanadores();
+	  dowiki('Rompecabezas_(juego)','ES');
     }
   </script>
   </body>
